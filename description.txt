@@ -1,0 +1,31 @@
+Keyword Extraction
+
+Landing Page - contains a social media background image that we created using twitter data on latest trends in technology. This image is stationary while we scroll. So it gives a parallax scrolling effect. Every page contains a link to the repository of the project.
+
+About Page - Gives the scope of the project and what applications we can achieve using this project.
+Some of the applications are mentioned below:
+Corporate meetings (Minutes of the meetings)
+Classrooms (Retrieve important points)
+Keywords for research papers (Retrieving buzzwords/key concepts from papers)
+Medical records (extracting keywords from records to retrieve info)
+
+Contact Us - Contains a form that will enable the user to contact with the developers incase they find a bug/query they need help with.
+
+Landing Page(contd.) - 
+At the bottom of the page contains a brief description on the developers.
+
+STEPS:
+
+1. A brief description on the working of the site is mentioned on the foreground of the site. "TO EXTRACT KEYWORDS FROM TEXT OR FROM A WEB PAGE, FOLLOW THE INSTRUCTIONS ON THE INPUT SCREEN BELOW.KEYWORDS ARE LISTED IN THE OUTPUT AREA, AND THE MEANING OF THE INPUT IS NUMERICALLY ENCODED AS A SEMANTIC FINGERPRINT,WHICH IS GRAPHICALLY DISPLAYED AS A SQUARE GRID. EACH BLUE DOT ON THE GRID CONTAINS PART OF THE MEANING OF THE TEXT."
+
+2. On clicking on the Get "Started button" will automatically scroll the user down to the next section of the site.
+
+3. The next section is where the user enters a  Text/Link for Keyword Extraction. A text box containing space for url to be entered can be seen right below. Upon successfully entering the link, the user can submit.
+
+
+4. After the homepage accepts a link(The link must be a twitter post link). This link is used by a php script on the backend which feeds the url as an argument to the Python program and executes by calling a terminal. The url is used for keyword extraction.
+
+5. The output is made into a python dictionary of keywords and their frequency which is fed into a database in MySQL.
+Now the website's backend has another PHP script which accesses the database and extracts this data and does some filtering using pattern matching techniques to remove redundant and junk data
+
+6. Once this is done, we use Google charts library to visualize this data using client side JavaScript.
